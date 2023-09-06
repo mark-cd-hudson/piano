@@ -1,0 +1,42 @@
+.StatsSidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: calc(100% - 4rem);
+  margin-top: 4rem;
+  /* background-color: var(--primary-bg); */
+  /* Make bg a linear gradient between primary-bg and secondary-bg */
+  background: linear-gradient(
+    90deg,
+    var(--primary-bg) -50%,
+    var(--secondary-bg) 100%
+  );
+  padding: 0.5rem;
+  box-sizing: border-box;
+  width: 20rem;
+  margin-right: -20rem;  /* Initially hidden */
+  transition: margin-right 0.3s ease;
+  border-radius: 1rem 0rem 0rem 0rem;
+
+  -webkit-box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.05);
+}
+
+.StatsSidebar.show {
+  margin-right: 0;  /* Slide in */
+}
+
+.StatsSidebar-expand-collapse {
+  position: absolute;
+  right: 0;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem;
+  background-color: var(--primary-ui);
+  color: var(--gs-1);
+  border-radius: 0.5rem;
+  cursor: pointer;
+  /* rotat 180 deg */
+  transform: rotate(180deg);
+}

@@ -1,0 +1,73 @@
+.SettingsSidebar {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  height: calc(100% - 4rem);
+  margin-top: 4rem;
+  /* background-color: var(--primary-bg); */
+  background: linear-gradient(
+    90deg,
+    var(--primary-bg) -50%,
+    var(--secondary-bg) 100%
+  );
+  padding: 1rem;
+  box-sizing: border-box;
+  width: 20rem;
+  margin-left: -20rem;  /* Initially hidden */
+  transition: margin-left 0.3s ease;
+  border-radius: 0rem 1rem 0rem 0rem;
+  /* shadow */
+  -webkit-box-shadow: 0px 0px 32px 0px rgba(0, 0, 0, 0.05);
+  overflow-y: scroll;
+  /* hide scrollbars */
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none;  /* IE 10+ */
+}
+
+.SettingsSidebar::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+.SettingsSidebar.show {
+  margin-left: 0;  /* Slide in */
+}
+
+.SettingsTitle {
+  display: flex;
+  background-color: white;
+  width: fit-content;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+}
+
+
+.SettingsList {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.SettingsListItem {
+  display: flex;
+  flex-direction: row;
+  gap: 0.5rem;
+  align-items: center;
+  font-weight: 500;
+
+  background-color: white;
+  padding: 1rem;
+  border-radius: 0.5rem;
+}
+
+.SettingsSidebar-expand-collapse {
+  position: absolute;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0.5rem;
+  background-color: var(--primary-ui);
+  color: var(--gs-1);
+  border-radius: 0.5rem;
+  cursor: pointer;
+}

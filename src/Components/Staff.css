@@ -1,0 +1,11 @@
+.Staff {
+  position: relative;
+}
+
+.Staff > * {
+  position: absolute;
+}
+
+.NoteDrawing {
+  position: relative;
+}

@@ -1,0 +1,79 @@
+.PianoQuiz {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.PianoQuiz-multiple-choice {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  width: 13rem;
+  gap: 1rem;
+}
+
+.PianoQuiz-choice {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  font-size: 2rem;
+  line-height: 2rem;
+  width: 4rem;
+  font-weight: 500;
+  padding: 1rem;
+  background-color: var(--gs-2);
+  border-radius: 1.25rem;
+  cursor: pointer;
+}
+/* Animate in green color */
+.PianoQuiz-choice.success {
+  animation: PianoQuiz-choice-success 0.3s ease-in;
+  background-color: var(--success-ui);
+}
+
+@keyframes PianoQuiz-choice-success {
+  0% {
+    background-color: var(--gs-3);
+  }
+  100% {
+    background-color: var(--success-ui);
+  }
+}
+
+/* Animate in red color */
+.PianoQuiz-choice.fail {
+  animation: PianoQuiz-choice-fail 0.3s ease-in;
+  background-color: var(--fail-ui);
+}
+
+@keyframes PianoQuiz-choice-fail {
+  0% {
+    background-color: var(--gs-3);
+  }
+  100% {
+    background-color: var(--fail-ui);
+  }
+}
+
+.PianoQuiz-choice:hover {
+  background-color: var(--gs-3);
+}
+
+.PianoQuiz-choice.success:hover {
+  background-color: var(--success-ui);
+}
+
+.PianoQuiz-choice.fail:hover {
+  background-color: var(--fail-ui);
+}
+
+.PianoQuiz-choice > sub {
+  font-size: 1rem;
+  line-height: 1rem;
+  font-weight: 400;
+  margin-left: 0.5rem;
+  margin-top: 0.5rem;
+}
